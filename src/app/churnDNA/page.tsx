@@ -11,7 +11,6 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
-import dynamic from "next/dynamic";
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Tooltip, Legend);
 
@@ -35,11 +34,6 @@ const churnSignalChartData = {
     },
   ],
 };
-
-const GeoMap = dynamic(() => import("react-leaflet").then(mod => mod.MapContainer as typeof mod.MapContainer), { ssr: false });
-const TileLayer = dynamic(() => import("react-leaflet").then(mod => mod.TileLayer), { ssr: false });
-const Marker = dynamic(() => import("react-leaflet").then(mod => mod.Marker), { ssr: false });
-const Popup = dynamic(() => import("react-leaflet").then(mod => mod.Popup), { ssr: false });
 
 export default function ChurnSignalsPage() {
   return (
@@ -153,26 +147,14 @@ export default function ChurnSignalsPage() {
         <div className="bg-gray-50 p-6 rounded-xl shadow-md">
           <h3 className="text-xl font-bold text-gray-800 mb-4">🗺️ Churn Geo-Map</h3>
           <div className="h-64 rounded-md overflow-hidden">
-            {typeof window !== "undefined" && (
-              <GeoMap center={[20.5937, 78.9629] as [number, number]} zoom={4} zoomControl={true} style={{ height: "100%", width: "100%" }}>
-                <TileLayer
-                  url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                  attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                />
-                <Marker position={[28.6139, 77.2090]}>
-                  <Popup>Delhi: High Churn</Popup>
-                </Marker>
-                <Marker position={[19.0760, 72.8777]}>
-                  <Popup>Mumbai: Moderate Churn</Popup>
-                </Marker>
-                <Marker position={[12.9716, 77.5946]}>
-                  <Popup>Bangalore: Low Churn</Popup>
-                </Marker>
-                <Marker position={[18.5204, 73.8567]}>
-                  <Popup>Pune: Emerging Churn</Popup>
-                </Marker>
-              </GeoMap>
-            )}
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12000000!2d78.9629!3d20.5937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjDCsDM1JzM3LjMiTiA3OMKwNTcnNDYuMyJF!5e0!3m2!1sen!2sin!4v1690000000000!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen={true}
+              loading="lazy"
+            ></iframe>
           </div>
         </div>
       </div>

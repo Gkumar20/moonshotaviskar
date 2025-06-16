@@ -71,7 +71,7 @@ function DigitalTwinsPage() {
         responsive: true,
         plugins: {
             legend: {
-                position: "top",
+                position: 'top' as const,
             },
             title: {
                 display: true,
@@ -98,7 +98,7 @@ function DigitalTwinsPage() {
                 className="mx-auto bg-white border border-gray-200 p-8 rounded-2xl shadow-xl"
             >
                 <p className="text-lg mb-6 leading-relaxed">
-                    Each Digital Twin below was intelligently crafted using AI analysis from ChurnDNA signals. These aren't just predictions—they're solutions, equipped with smart, love-infused strategies 💖 to keep your customers loyal and happy.
+                    Each Digital Twin below was intelligently crafted using AI analysis from ChurnDNA signals. These aren&apos;t just predictions—they&apos;re solutions, equipped with smart, love-infused strategies 💖 to keep your customers loyal and happy.
                 </p>
 
                 <motion.div

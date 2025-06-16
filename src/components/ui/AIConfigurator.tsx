@@ -17,9 +17,13 @@ function AIConfiguratorWizard() {
   const [selectedSignals, setSelectedSignals] = useState<string[]>([]);
   const [model, setModel] = useState<string>("");
   const [rules, setRules] = useState<string>("");
-  const [analysisResult, setAnalysisResult] = useState<any | null>(null);
+  const [analysisResult, setAnalysisResult] = useState<{
+    summary: string;
+    accuracy: string;
+    topFactors: string[];
+    modelUsed: string;
+  } | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
-  const [uploadedFile, setUploadedFile] = useState<File | null>(null);
 
   const runAnalysis = () => {
     setLoading(true);
@@ -76,7 +80,6 @@ function AIConfiguratorWizard() {
         <input
           type="file"
           accept=".xlsx, .csv"
-          onChange={(e) => setUploadedFile(e.target.files?.[0] || null)}
           className="w-full border border-indigo-300 rounded-lg p-2"
         />
       </div>
