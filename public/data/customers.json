@@ -1,0 +1,22 @@
+[
+  {
+    "id": "C108",
+    "name": "Amit Verma",
+    "churnRisk": 92,
+    "location": "Delhi",
+    "signals": {
+      "dataDrop": true,
+      "lowUsage": true,
+      "billingIssues": false
+    },
+    "twinProfile": {
+      "type": "Heavy User",
+      "preferences": ["Streaming", "Night-time usage"],
+      "history": {
+        "tenure": "14 months",
+        "supportCalls": 3
+      },
+      "recommendation": "Offer 50% streaming pack discount"
+    }
+  }
+]
