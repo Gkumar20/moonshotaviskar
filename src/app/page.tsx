@@ -6,8 +6,8 @@ import { ChurnDNAEngineSection } from "../components/ui/ChurnDNAEngineSection";
 import { RoadmapSection } from "../components/ui/RoadmapSection";
 import { MermaidMap } from "../components/ui/MermaidMap";
 import { DigitalTwinsSection } from "../components/ui/DigitalTwinsSection";
-import { GenerativeAIRulesSection } from "../components/ui/GenerativeAIRulesSection";
-import  AboutSection  from "../components/ui/Bottom";
+import AboutSection from "../components/ui/Bottom";
+import { AIAgenticAnalysisSection } from "@/components/ui/AIAgenticAnalysisSection";
 
 export default function Home() {
   return (
@@ -19,7 +19,7 @@ export default function Home() {
           <RoadmapSection />
           <MermaidMap />
           <DigitalTwinsSection />
-          <GenerativeAIRulesSection />
+          <AIAgenticAnalysisSection />
         </div>
         <AboutSection />
       </div>

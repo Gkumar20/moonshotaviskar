@@ -105,48 +105,9 @@ export default function ChurnSignalsPage() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-20">
-        <div className="bg-blue-50 p-10 rounded-xl shadow-inner md:col-span-1">
-          <h2 className="text-2xl font-bold mb-6 text-blue-900">📊 Signal Intensity Chart</h2>
-          <div className="w-full h-64">
-            <Bar data={churnSignalChartData} />
-          </div>
-        </div>
-
-        <div className="bg-gray-50 p-6 rounded-xl shadow-md md:col-span-1">
-          <h3 className="text-xl font-bold text-gray-800 mb-4">🔍 Real-time Diagnostics</h3>
-          <table className="w-full border-collapse border border-gray-200 rounded-lg text-sm text-gray-700">
-            <thead>
-              <tr className="bg-gray-100 text-gray-800">
-                <th className="border border-gray-300 px-4 py-2 text-left">Metric</th>
-                <th className="border border-gray-300 px-4 py-2 text-left">Value</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td className="border border-gray-300 px-4 py-2">Avg complaint resolution time</td>
-                <td className="border border-gray-300 px-4 py-2">36 hours</td>
-              </tr>
-              <tr className="bg-gray-50">
-                <td className="border border-gray-300 px-4 py-2">Customer activity dip after week</td>
-                <td className="border border-gray-300 px-4 py-2">Week 3</td>
-              </tr>
-              <tr>
-                <td className="border border-gray-300 px-4 py-2">Support request escalation rate</td>
-                <td className="border border-gray-300 px-4 py-2">28%</td>
-              </tr>
-              <tr className="bg-gray-50">
-                <td className="border border-gray-300 px-4 py-2">Flagged churn risk segment</td>
-                <td className="border border-gray-300 px-4 py-2">Tier B - Urban 25-34</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-20">
-        <div className="bg-gray-50 p-6 rounded-xl shadow-md">
+        <div className="bg-gray-50 p-1 rounded-xl shadow-md">
           <h3 className="text-xl font-bold text-gray-800 mb-4">🗺️ Churn Geo-Map</h3>
-          <div className="h-64 rounded-md overflow-hidden">
+          <div className="h-full rounded-md overflow-hidden">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12000000!2d78.9629!3d20.5937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjDCsDM1JzM3LjMiTiA3OMKwNTcnNDYuMyJF!5e0!3m2!1sen!2sin!4v1690000000000!5m2!1sen!2sin"
               width="100%"
@@ -157,15 +118,106 @@ export default function ChurnSignalsPage() {
             ></iframe>
           </div>
         </div>
+
+        <div className="bg-gray-50 p-6 rounded-xl shadow-md md:col-span-1">
+          <h3 className="text-xl font-bold text-gray-800 mb-4">📍 Area-wise Customer Analysis</h3>
+          <table className="w-full border-collapse border border-gray-200 rounded-lg text-sm text-gray-700">
+            <thead>
+              <tr className="bg-gray-100 text-gray-800">
+                <th className="border border-gray-300 px-4 py-2 text-left">Area</th>
+                <th className="border border-gray-300 px-4 py-2 text-left">Number of Customers</th>
+                <th className="border border-gray-300 px-4 py-2 text-left">Top 5 Customers</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-gray-300 px-4 py-2">Mumbai</td>
+                <td className="border border-gray-300 px-4 py-2">1200</td>
+                <td className="border border-gray-300 px-4 py-2">John Doe, Jane Smith, Raj Kumar, Emily Green, Carlos Vega</td>
+              </tr>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 px-4 py-2">Delhi</td>
+                <td className="border border-gray-300 px-4 py-2">950</td>
+                <td className="border border-gray-300 px-4 py-2">Amit Shah, Priya Singh, Rahul Mehta, Neha Gupta, Arjun Kapoor</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 px-4 py-2">Bangalore</td>
+                <td className="border border-gray-300 px-4 py-2">800</td>
+                <td className="border border-gray-300 px-4 py-2">Suresh Reddy, Kavita Rao, Anil Kumar, Sneha Patil, Ramesh Yadav</td>
+              </tr>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 px-4 py-2">Chennai</td>
+                <td className="border border-gray-300 px-4 py-2">700</td>
+                <td className="border border-gray-300 px-4 py-2">Vikram Iyer, Lakshmi Narayan, Meera Krishnan, Aravind Swamy, Karthik Raja</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 px-4 py-2">Hyderabad</td>
+                <td className="border border-gray-300 px-4 py-2">650</td>
+                <td className="border border-gray-300 px-4 py-2">Ravi Teja, Anjali Sharma, Pooja Hegde, Mahesh Babu, Naga Chaitanya</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
 
-      <div className="bg-white p-6 mt-20 rounded-xl shadow-md">
-        <h3 className="text-2xl font-bold text-gray-900 mb-4">📂 Data Ingestion & Model Insights</h3>
-        <p className="text-gray-600 text-sm">
-          Upload churn prediction models or customer data snapshots. View predictive churn score, probability matrix, and triggered signal summary.
-        </p>
-        <div className="mt-4 border-2 border-dashed border-gray-300 p-10 rounded-lg text-center text-gray-500">
-          Drag & drop or click to upload CSV / Excel
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-20">
+        <div className="bg-gray-50 p-6 rounded-xl shadow-md md:col-span-1">
+          <h3 className="text-xl font-bold text-gray-800 mb-4">🔍 Real-time Diagnostics</h3>
+          <table className="w-full border-collapse border border-gray-200 rounded-lg text-sm text-gray-700">
+            <thead>
+              <tr className="bg-blue-100 text-gray-800">
+                <th className="border border-gray-300 px-4 py-2 text-left">Metric</th>
+                <th className="border border-gray-300 px-4 py-2 text-left">Value</th>
+                <th className="border border-gray-300 px-4 py-2 text-left">Trend</th>
+                <th className="border border-gray-300 px-4 py-2 text-left">Last Updated</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-gray-300 px-4 py-2">Avg Complaint Resolution Time</td>
+                <td className="border border-gray-300 px-4 py-2">36 hours</td>
+                <td className="border border-gray-300 px-4 py-2 text-green-600">Improving</td>
+                <td className="border border-gray-300 px-4 py-2">2 hours ago</td>
+              </tr>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 px-4 py-2">Customer Activity Dip (Week)</td>
+                <td className="border border-gray-300 px-4 py-2">Week 3</td>
+                <td className="border border-gray-300 px-4 py-2 text-red-600">Declining</td>
+                <td className="border border-gray-300 px-4 py-2">1 day ago</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 px-4 py-2">Support Request Escalation Rate</td>
+                <td className="border border-gray-300 px-4 py-2">28%</td>
+                <td className="border border-gray-300 px-4 py-2 text-yellow-600">Stable</td>
+                <td className="border border-gray-300 px-4 py-2">3 hours ago</td>
+              </tr>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 px-4 py-2">Flagged Churn Risk Segment</td>
+                <td className="border border-gray-300 px-4 py-2">Tier B - Urban 25-34</td>
+                <td className="border border-gray-300 px-4 py-2 text-red-600">High Risk</td>
+                <td className="border border-gray-300 px-4 py-2">5 hours ago</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 px-4 py-2">Customer Retention Rate</td>
+                <td className="border border-gray-300 px-4 py-2">72%</td>
+                <td className="border border-gray-300 px-4 py-2 text-green-600">Improving</td>
+                <td className="border border-gray-300 px-4 py-2">1 hour ago</td>
+              </tr>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 px-4 py-2">Avg Monthly Revenue per User</td>
+                <td className="border border-gray-300 px-4 py-2">$45</td>
+                <td className="border border-gray-300 px-4 py-2 text-green-600">Increasing</td>
+                <td className="border border-gray-300 px-4 py-2">30 minutes ago</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div className="bg-blue-50 p-10 rounded-xl shadow-inner md:col-span-1">
+          <h2 className="text-2xl font-bold mb-6 text-blue-900">📊 Signal Intensity Chart</h2>
+          <div className="w-full h-64">
+            <Bar data={churnSignalChartData} />
+          </div>
         </div>
       </div>
     </div>
