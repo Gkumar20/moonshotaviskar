@@ -1,0 +1,52 @@
+{
+  "greetings": [
+    "Hi there! How can I assist you today? 😊",
+    "Hello! What would you like to know about ChurnDNA? 🔮",
+    "Hey! Feel free to ask me anything about our platform. 🚀"
+  ],
+  "plans": [
+    "Our plans include building a fully animated simulation website showcasing AI + Digital Twins for customer retention.",
+    "We aim to help Telcos predict and prevent churn with AI-driven insights and interactive dashboards.",
+    "ChurnDNA focuses on creating a DIY Telco builder for crafting personalized retention strategies."
+  ],
+  "churnDNA results": [
+    "ChurnDNA predicts churn risks with 92% accuracy using AI models like Decision Trees and Neural Networks.",
+    "Our platform identifies top churn signals such as network drops, low usage, and billing issues.",
+    "Digital Twins provide a virtual avatar for each customer, tracking behavior, risk, and personalized recommendations."
+  ],
+  "features": [
+    "ChurnDNA offers features like AI-driven churn prediction, Digital Twins, and interactive dashboards.",
+    "Our platform includes a DIY Telco builder for configuring churn signals, AI models, and retention strategies.",
+    "We provide real-time diagnostics, geo-mapping of churn risks, and AI-generated retention plans."
+  ],
+  "ai models": {
+    "low data": "Use Decision Trees or Logistic Regression for small datasets.",
+    "high dimensional": "Use Random Forest or Gradient Boosting for high-dimensional data.",
+    "complex patterns": "Use Neural Networks or LSTM for time-series or behavioral data.",
+    "explainability": "Use Decision Trees or SHAP with XGBoost for interpretable results."
+  },
+  "digital twins": {
+    "description": "Digital Twins simulate customer behavior using real-time data and AI models.",
+    "use case template": "For customer {customer_id}, simulate behavior using {ai_model}. Track churn signals like {signals} and generate a retention plan based on {strategy}.",
+    "example": "For customer 1023, simulate behavior using Neural Networks. Track churn signals like low data usage and frequent complaints. Generate a retention plan based on personalized offers and proactive support."
+  },
+  "informal": [
+    "Did you know? ChurnDNA uses Digital Twins to create virtual avatars of customers! 🧍",
+    "Fun fact: Our platform is powered by AI and Generative Intelligence to make retention strategies smarter! 🤖",
+    "ChurnDNA's interactive dashboards make data visualization fun and insightful! 📊"
+  ],
+  "how it works": [
+    "ChurnDNA works by analyzing customer data to identify churn signals and predict risks using AI models.",
+    "Our platform uses Digital Twins to simulate customer behavior and provide actionable retention strategies.",
+    "You can configure churn signals, select AI models, and export retention strategies using our DIY Telco builder."
+  ],
+  "pricing": [
+    "ChurnDNA is currently a simulation platform and does not have pricing plans yet.",
+    "We aim to offer flexible pricing models for Telcos in the future, based on usage and features."
+  ],
+  "support": [
+    "For support, you can email us at support@churndna.com. We're here to help! 📧",
+    "Feel free to reach out to our team for any questions or issues. We're always happy to assist! 😊"
+  ],
+  "fallback": "I'm not sure about that. Can you ask something else? 🤔"
+}
