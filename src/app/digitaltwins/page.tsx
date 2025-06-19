@@ -81,12 +81,12 @@ function DigitalTwinsPage() {
     };
 
     return (
-        <div className="mt-20 px-6 py-10 bg-white min-h-screen text-gray-900 w-full">
+        <div className="mt-20 px-6 py-20 bg-white min-h-screen text-gray-900 w-full">
             <motion.h1
                 initial={{ opacity: 0, y: -50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
-                className="text-5xl font-extrabold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-pink-500"
+                className="text-5xl font-extrabold text-center pb-5  text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-pink-500"
             >
                 🧬 Digital Twins: Personalized AI Retention Strategies
             </motion.h1>

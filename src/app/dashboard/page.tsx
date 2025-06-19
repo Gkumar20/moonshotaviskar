@@ -61,7 +61,7 @@ const churnBehaviorData = {
 export default function ChurnDNA() {
 
   return (
-    <div className="relative min-h-screen bg-white text-gray-800 px-6 py-20 space-y-16 overflow-hidden">
+    <div className="relative min-h-screen bg-white text-gray-800 px-6 py-40 space-y-16 overflow-hidden">
       {/* Title */}
       <div className="relative z-10 w-full flex justify-center items-center">
         <MotionH1
@@ -70,7 +70,7 @@ export default function ChurnDNA() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          🧬 ChurnDNA Engine Dashboard
+          🧬 ChurnDNA Engine Live Dashboard
         </MotionH1>
       </div>
 

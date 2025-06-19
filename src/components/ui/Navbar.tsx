@@ -60,7 +60,7 @@ export function Navbar() {
                 pathname === "/dashboard" ? "border-b-2 border-gray-800 font-bold text-opacity-90" : "hover:text-opacity-70"
               }`}
             >
-              Dashboard
+              Live Dashboard
             </Link>
           </li>
           <li>
@@ -75,9 +75,9 @@ export function Navbar() {
           </li>
           <li>
             <Link
-              href="/mermaid-map"
+              href="/about"
               className={`text-black px-4 py-2 transition-all duration-300 ${
-                pathname === "/mermaid-map" ? "border-b-2 border-gray-800 font-bold text-opacity-90" : "hover:text-opacity-70"
+                pathname === "/about" ? "border-b-2 border-gray-800 font-bold text-opacity-90" : "hover:text-opacity-70"
               }`}
             >
               About Us

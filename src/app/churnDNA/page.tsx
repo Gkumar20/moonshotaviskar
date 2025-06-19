@@ -37,7 +37,7 @@ const churnSignalChartData = {
 
 export default function ChurnSignalsPage() {
   return (
-    <div className="min-h-screen w-full bg-white text-gray-800 px-8 py-20 space-y-20 overflow-hidden">
+    <div className="min-h-screen w-full bg-white text-gray-800 px-8 py-40 space-y-20 overflow-hidden">
       <div className="text-center">
         <MotionH1
           className="text-4xl md:text-6xl font-bold text-blue-800"
