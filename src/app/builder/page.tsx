@@ -19,14 +19,10 @@ const MotionDiv = motion.div;
 const MotionH1 = motion.h1;
 const MotionP = motion.p;
 
-
-
-
-
 export default function AIAnalysisPage() {
   return (
-    <div className="min-h-screen w-full bg-white text-gray-800 px-8 py-20 space-y-20 overflow-hidden">
-      <div className="relative h-[40rem] bg-gradient-to-br from-indigo-900 via-black to-gray-900 overflow-hidden rounded-md">
+    <div className="min-h-screen w-full bg-white text-gray-800 px-4 md:px-8 py-10 md:py-20 space-y-10 md:space-y-20 overflow-hidden">
+      <div className="relative h-[20rem] md:h-[40rem] bg-gradient-to-br from-indigo-900 via-black to-gray-900 overflow-hidden rounded-md">
         <div className="absolute inset-0 bg-[radial-gradient(#ffffff22_1px,transparent_1px)] [background-size:16px_16px] opacity-20" />
         <div className="relative z-10 flex items-center justify-center h-full">
           <MotionH1
@@ -41,7 +37,7 @@ export default function AIAnalysisPage() {
       </div>
 
       <MotionP
-        className="mt-4 text-lg text-gray-600 text-center"
+        className="mt-4 text-base md:text-lg text-gray-600 text-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 1 }}
@@ -49,7 +45,7 @@ export default function AIAnalysisPage() {
         Customize churn insights with DIY configurations powered by AI
       </MotionP>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 text-center">
         {[
           {
             icon: "📶",
@@ -74,14 +70,14 @@ export default function AIAnalysisPage() {
         ].map(({ icon, title, desc }) => (
           <MotionDiv
             key={title}
-            className="bg-white p-6 rounded-xl shadow-xl border hover:scale-105 transition-transform"
+            className="bg-white p-4 md:p-6 rounded-xl shadow-xl border hover:scale-105 transition-transform"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
           >
-            <div className="text-4xl mb-2">{icon}</div>
-            <h3 className="text-xl font-semibold text-indigo-700">{title}</h3>
-            <p className="text-sm text-gray-600 mt-1">{desc}</p>
+            <div className="text-3xl md:text-4xl mb-2">{icon}</div>
+            <h3 className="text-lg md:text-xl font-semibold text-indigo-700">{title}</h3>
+            <p className="text-xs md:text-sm text-gray-600 mt-1">{desc}</p>
           </MotionDiv>
         ))}
       </div>

@@ -96,10 +96,10 @@ function AIConfiguratorWizard() {
   ];
 
   return (
-    <div className="mt-20 bg-gradient-to-br from-white via-blue-50 to-indigo-100 rounded-2xl shadow-2xl p-10 border border-indigo-200">
-      <h3 className="text-3xl font-extrabold mb-6 text-indigo-800 flex items-center gap-2">🤖 DIY AI Configurator</h3>
+    <div className="mt-10 md:mt-20 bg-gradient-to-br from-white via-blue-50 to-indigo-100 rounded-2xl shadow-2xl p-6 md:p-10 border border-indigo-200">
+      <h3 className="text-2xl md:text-3xl font-extrabold mb-4 md:mb-6 text-indigo-800 flex items-center gap-2">🤖 DIY AI Configurator</h3>
 
-      <div className="mb-6">
+      <div className="mb-4 md:mb-6">
         <label className="block mb-2 font-semibold text-gray-700">📂 Upload Optional Customer Excel File</label>
         <input
           type="file"
@@ -108,12 +108,12 @@ function AIConfiguratorWizard() {
         />
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div className="bg-white p-4 rounded-xl shadow border border-gray-200">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
+        <div className="bg-white p-3 md:p-4 rounded-xl shadow border border-gray-200">
           <label className="block mb-2 font-semibold text-gray-700">✨ Select Churn Signals</label>
           <select
             multiple
-            className="w-full border border-indigo-200 p-3 rounded-lg focus:ring-2 focus:ring-indigo-400"
+            className="w-full border border-indigo-200 p-2 md:p-3 rounded-lg focus:ring-2 focus:ring-indigo-400"
             onChange={(e) => setSelectedSignals(Array.from(e.target.selectedOptions, o => o.value))}
           >
             <option value="Network Drops">📶 Network Drops</option>
@@ -123,10 +123,10 @@ function AIConfiguratorWizard() {
             <option value="Frequent Complaints">📢 Frequent Complaints</option>
           </select>
         </div>
-        <div className="bg-white p-4 rounded-xl shadow border border-gray-200">
+        <div className="bg-white p-3 md:p-4 rounded-xl shadow border border-gray-200">
           <label className="block mb-2 font-semibold text-gray-700">🧠 Choose AI Model</label>
           <select
-            className="w-full border border-indigo-200 p-3 rounded-lg focus:ring-2 focus:ring-indigo-400"
+            className="w-full border border-indigo-200 p-2 md:p-3 rounded-lg focus:ring-2 focus:ring-indigo-400"
             onChange={(e) => setModel(e.target.value)}
             value={model}
           >
@@ -136,11 +136,11 @@ function AIConfiguratorWizard() {
             <option value="Neural Network">🕸 Neural Network</option>
           </select>
         </div>
-        <div className="bg-white p-4 rounded-xl shadow border border-gray-200">
+        <div className="bg-white p-3 md:p-4 rounded-xl shadow border border-gray-200">
           <label className="block mb-2 font-semibold text-gray-700">⚙️ Configure Rules</label>
           <textarea
-            className="w-full border border-indigo-200 p-3 rounded-lg focus:ring-2 focus:ring-indigo-400"
-            rows={4}
+            className="w-full border border-indigo-200 p-2 md:p-3 rounded-lg focus:ring-2 focus:ring-indigo-400"
+            rows={3}
             placeholder="e.g. if Late Payments > 3 then flag as High Risk"
             value={rules}
             onChange={(e) => setRules(e.target.value)}
@@ -148,8 +148,7 @@ function AIConfiguratorWizard() {
         </div>
       </div>
 
-      <div className="bg-white p-4 rounded-xl shadow border border-gray-200 mt-8 flex flex-col md:flex-row gap-8">
-        {/* Left Side: Generated Text Response */}
+      <div className="bg-white p-3 md:p-4 rounded-xl shadow border border-gray-200 mt-6 md:mt-8 flex flex-col md:flex-row gap-4 md:gap-8">
         <div className="flex-1">
           <h4 className="text-xl font-bold text-indigo-700 mb-4">🤖 Generated AI Suggestions</h4>
           {suggestionLoading ? (
@@ -171,7 +170,6 @@ function AIConfiguratorWizard() {
           )}
         </div>
 
-        {/* Right Side: Buttons and Settings */}
         <div className="flex flex-col gap-4">
           <button
             onClick={generateSuggestions}
@@ -204,28 +202,26 @@ function AIConfiguratorWizard() {
 
       <button
         onClick={runAnalysis}
-        className="mt-10 px-8 py-3 bg-gradient-to-r from-indigo-600 to-blue-600 text-white font-semibold rounded-full shadow-md hover:scale-105 transition-transform"
+        className="mt-6 md:mt-10 px-6 md:px-8 py-2 md:py-3 bg-gradient-to-r from-indigo-600 to-blue-600 text-white font-semibold rounded-full shadow-md hover:scale-105 transition-transform"
       >
         🚀 Run AI Analysis
       </button>
 
       {loading && (
         <div className="fixed inset-0 flex items-center justify-center bg-white/30 backdrop-blur-md z-50">
-          <div className="text-[10rem] animate-pulse drop-shadow-xl">🧠</div>
+          <div className="text-[5rem] md:text-[10rem] animate-pulse drop-shadow-xl">🧠</div>
         </div>
       )}
 
       {analysisResult && (
-        <div className="mt-12 bg-white border border-indigo-100 shadow-xl rounded-xl p-8">
-          <h4 className="text-2xl font-bold text-indigo-700 mb-4">📊 AI Analysis Results</h4>
+        <div className="mt-8 md:mt-12 bg-white border border-indigo-100 shadow-xl rounded-xl p-6 md:p-8">
+          <h4 className="text-xl md:text-2xl font-bold text-indigo-700 mb-4">📊 AI Analysis Results</h4>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Left: Graph */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             <div>
               <Line data={churnSignalChartData} />
             </div>
 
-            {/* Right: Table */}
             <div className="overflow-x-auto">
               <table className="min-w-full border border-gray-200 rounded-xl overflow-hidden">
                 <thead className="bg-indigo-100">
