@@ -38,7 +38,7 @@ const AboutUs = () => {
           </p>
         </div>
         <Image
-          src="https://cdn1-public.infotech.com/infographics/uploads/45738/DESIGN-5895-HERO-Gen-AI-in-Digital-Twins-1920x1080-v1-1_original.png"
+          src={`/DigitalTwins.png`}
           width={500}
           height={500}
           alt="ChurnDNA"
